@@ -1,0 +1,646 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<title>Title</title>
+<style>
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+strong,
+b,
+strong *,
+b * {
+  font-weight: bold;
+}
+em,
+i,
+em *,
+i * {
+  font-style: italic;
+}
+/*---------Start Variable Setup---------*/
+/*---------End Variable Setup---------*/
+/*---------Start Main Setup---------*/
+.MailMessagePane table {
+  width: 100%;
+  -webkit-border-horizontal-spacing: 0px;
+  -webkit-border-vertical-spacing: 0px;
+}
+.MailMessagePane #wrapper {
+  width: 100%;
+  margin: auto;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-size: 16px;
+  font-family: -apple-system, 'Helvetica Neue', sans-serif;
+  letter-spacing: -0.01em;
+  line-height: 1.1em;
+  -webkit-font-smoothing: antialiased;
+}
+body * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrapper-container {
+  max-width: 100%;
+  margin: auto;
+  padding: 0;
+}
+section {
+  margin: 30px 0;
+  padding: 0 4px;
+}
+a:link,
+a:visited {
+  color: #666;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a [x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+img {
+  border: 0;
+}
+.mobile {
+  display: none;
+}
+.osx-only {
+  display: inline-block !important;
+}
+.ios-only {
+  display: none !important;
+}
+.container {
+  max-width: 768px;
+  padding: 0 65px;
+  margin: 0 auto;
+  overflow: auto;
+}
+.role {
+  width: 100%;
+  padding: 18px 0 0 0;
+  margin: 0 auto;
+}
+.grid-12 {
+  width: 100%;
+  max-width: 100%;
+  clear: both;
+}
+.grid-11 {
+  width: 91.6666666667%;
+}
+.grid-10 {
+  width: 83.3333333333%;
+}
+.grid-9 {
+  width: 75%;
+}
+.grid-8 {
+  width: 66.6666666667%;
+}
+.grid-7 {
+  width: 58.3333333334%;
+}
+.grid-6 {
+  width: 50%;
+}
+.grid-5 {
+  width: 41.6666666667%;
+}
+.grid-4 {
+  width: 33.3333333334%;
+}
+.grid-3 {
+  width: 25%;
+}
+.grid-2 {
+  width: 16.6666666667%;
+}
+.grid-1 {
+  width: 8.33333333333%;
+}
+div[class*='push-'] {
+  position: relative;
+}
+.push-2 {
+  left: 16.666667%;
+}
+.push-3 {
+  left: 25%;
+}
+.push-4 {
+  left: 33.333333%;
+}
+.push-5 {
+  left: 41.666667%;
+}
+.push-6 {
+  left: 50%;
+}
+.push-7 {
+  left: 58.333333%;
+}
+.push-8 {
+  left: 66.666667%;
+}
+.push-9 {
+  left: 75%;
+}
+.push-10 {
+  left: 83.333333%;
+}
+div[class*='pull-'] {
+  position: relative;
+}
+.pull-2 {
+  right: 16.666667%;
+}
+.pull-3 {
+  right: 25%;
+}
+.pull-4 {
+  right: 33.333333%;
+}
+.pull-5 {
+  right: 41.666667%;
+}
+.pull-6 {
+  right: 50%;
+}
+.pull-7 {
+  right: 58.333333%;
+}
+.pull-8 {
+  right: 66.666667%;
+}
+.pull-9 {
+  right: 75%;
+}
+.pull-10 {
+  right: 83.333333%;
+}
+div[class*='grid-'] {
+  float: left;
+  margin: 0;
+  padding: 0 1.19047619%;
+  box-sizing: border-box;
+}
+div[class*='grid-']:first-child {
+  padding-left: 0;
+}
+div[class*='grid-']:last-child {
+  padding-right: 0;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container:after,
+header:after,
+section:after,
+.role:after,
+.wrapper-container {
+  content: "";
+  display: block;
+  clear: both;
+}
+.ax-img {
+  margin: 0 0 -1px 0 !important;
+}
+@media only screen and (max-width: 640px) {
+  .osx-only {
+    display: none !important;
+  }
+  .ios-only {
+    display: inline-block !important;
+  }
+  a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper-container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  section {
+    margin: 15px 0;
+    padding: 0;
+  }
+  .mobile {
+    display: inherit;
+  }
+  .desktop {
+    display: none;
+  }
+  div[class*='grid-'] {
+    float: none;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    clear: both;
+    padding-left: 0;
+  }
+  div[class*='push-'] {
+    left: auto;
+  }
+  div[class*='pull-'] {
+    right: auto;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 25px;
+    margin: 0;
+  }
+}
+/*---------End Main Setup---------*/
+/*---------Start Typography Setup---------*/
+header h1 {
+  font-size: 2.25em;
+  line-height: 1.1em;
+  font-weight: 400;
+  color: #000;
+}
+header h2,
+header p {
+  font-size: 1.25em;
+  line-height: 1.1em;
+}
+header a:link,
+header a:visited {
+  text-decoration: none;
+}
+header a:hover {
+  text-decoration: underline;
+}
+section h2 {
+  font-size: 1.375em;
+  line-height: 1.2em;
+  margin-bottom: 5px;
+  margin-top: 24px;
+  font-weight: 400;
+  color: #000;
+}
+section p,
+section ul li,
+section ol li {
+  font-size: 1em;
+  line-height: 1.375em;
+  color: $generic-grey-colour;
+}
+section p,
+section ul,
+section ol {
+  margin-top: 5px;
+  margin-bottom: 1em;
+}
+section ul,
+section ol {
+  padding-left: 20px;
+  list-style-position: inside;
+}
+section ul ul,
+section ol ul,
+section ul ol,
+section ol ol {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+section ul {
+  list-style-type: disc;
+}
+section ol {
+  list-style-type: decimal;
+}
+section a:link,
+section a:visited {
+  text-decoration: none;
+}
+section a:hover {
+  text-decoration: underline;
+}
+footer p {
+  font-size: 0.875em;
+  line-height: 1em;
+  font-weight: 400;
+  color: #666;
+}
+@media only screen and (max-width: 640px) {
+  header h1 {
+    font-size: 1.875em;
+  }
+  header h2,
+  header p {
+    font-size: 1.25em;
+  }
+  section h2 {
+    font-size: 1.25em;
+    margin-top: 15px;
+  }
+  section p,
+  section ul li,
+  section ol li {
+    font-size: 0.875rem;
+  }
+  section .mobile-br {
+    display: block;
+  }
+  footer p {
+    font-size: 0.688em;
+  }
+}
+/*---------End Typography Setup---------*/
+/*----------Header Setup-------------*/
+header .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+header .container .header-wrapper {
+  max-width: 600px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  clear: both;
+  text-align: center;
+  margin: 0 auto;
+}
+header .container .header-wrapper .heroimage {
+  max-width: 600px; height: 380px; background-color: #5191bb; font-size:30px; line-height: 380px; color: #fff;
+  padding-bottom: 30px;
+  clear: both;
+  text-align: center;
+  margin: 0 auto;
+}
+header .container .header-wrapper h1 {
+  display: block;
+  margin: 5px 5px 8px 5px;
+  min-width: 50px;
+  font-size: 30px;
+}
+header .container .header-wrapper p {
+  display: block;
+  margin: 5px 5px 8px 5px;
+  min-width: 50px;
+  font-size: 16px;
+}
+	section ul{width:600px; height:auto; margin:0 auto;}
+section ul li{width: 145px; height: auto; float: left; text-align: center; list-style: none;}
+	section ul li p{font-size:12px;}
+footer .container {
+  padding-left: 0;
+  padding-right: 0; clear: both;
+}
+footer .container .footer-content {
+  padding: 5px;
+  border-top: 1px solid #999;
+}
+footer .container .footer-content p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  line-height: 1.143em;
+  text-align: center;
+}
+footer .container .footer-content p a {
+  color: #666 !important;
+  text-decoration: underline !important;
+}
+@media only screen and (max-width: 640px) {
+  header .container .header-wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  header .container .header-wrapper h1 {
+    margin-bottom: 5px;
+  }
+  footer .container .footer-content p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+}
+/*----------END Header Setup-------------*/
+/*-------------Start Footer Setup------------*/
+/* Add import of footer .styl file below */
+/*-------------End Footer Setup------------*/
+/*---------Start Element Setup---------*/
+/*  Add imports of .styl files below */
+/*---------End Element Setup---------*/
+/*-------------Start BRANCH Setup------------*/
+/*  Add imports of .styl files to add custom styles to your branch */
+/*-------------End BRANCH Setup------------*/
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <div class="wrapper-container">
+    <header>
+      <div class="container">
+  <div class="grid-12">
+    <div class="header-wrapper">
+	  <div class="heroimage">Hero image</div>
+      <h1 data-editable="text" data-content-name="Title" data-fixed-style="true">A little more goes a long way.</h1>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim, urna a dictum porta,lacus quam tristrque risus, nec elementum risus neque sit amet tortor. Quisque varius nulla non volutpat lacinia. Phasellus aliquet nibh eget orci vehicula tincidunt.
+		<br /><br />
+	  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		</p>
+    </div><!-- close header-wrapper -->
+  </div><!-- close grid-12 -->
+</div><!-- close container -->
+  	</header>
+    <section>
+		<!-- close .container -->
+      <!-- Add your code to this directory when working in a branch -->
+<!-- Work in this file or add more files – it's up to you :) -->
+		<ul>
+			<li>
+				<div><img src="images/app1.jpg" width="62" height="62" /></div>
+				<a href="#">Seven</a>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim.</p>
+			</li>
+			<li>
+				<div><img src="images/app2.jpg" width="62" height="62" /></div>
+				<a href="#">Seven</a>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim.</p>
+			</li>
+			<li>
+				<div><img src="images/app3.jpg" width="62" height="62" /></div>
+				<a href="#">Seven</a>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim.</p>
+			</li>
+			<li>
+				<div><img src="images/app4.jpg" width="62" height="62" /></div>
+				<a href="#">Seven</a>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim.</p>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<div><img src="images/app1.jpg" width="62" height="62" /></div>
+				<a href="#">Seven</a>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim.</p>
+			</li>
+			<li>
+				<div><img src="images/app2.jpg" width="62" height="62" /></div>
+				<a href="#">Seven</a>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim.</p>
+			</li>
+			<li>
+				<div><img src="images/app3.jpg" width="62" height="62" /></div>
+				<a href="#">Seven</a>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim.</p>
+			</li>
+			<li>
+				<div><img src="images/app4.jpg" width="62" height="62" /></div>
+				<a href="#">Seven</a>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dignissim.</p>
+			</li>
+		</ul>
+    </section>
+    <footer>
+  	<div class="container">
+	<div class="footer-content">
+		<p>For internal use only. Sent from <a href="https://istweb.apple.com/composer-help/" target="_blank">IS&amp;T Composer</a>.</p>
+	</div>
+</div>
+    </footer>
+  </div><!-- close wrapper-container -->
+</div><!-- end wrapper-->
+</body>
+</html>
